@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./plugins
+    ./options.nix
+  ];
+}

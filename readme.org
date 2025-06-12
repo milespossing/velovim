@@ -1,0 +1,9 @@
+#+TITLE: Readme
+
+* Flakes
+
+  So it seems like it might be wise for me to actually introduce my nvim configuration as a standalone nix flake. This is nice for 2 reasons
+
+  - I can put the flake out separate from the rest of my nix configuration, which is nice
+  - I can run the nix flake directly without installing it--giving me the ability to test locally.
+
