@@ -71,9 +71,5 @@
     };
 
     ts-autotag.enable = true;
-
-    neotest.adapters.neotest-vitest = {
-      enable = true;
-    };
   };
 }
