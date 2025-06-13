@@ -18,6 +18,8 @@
           delay = 0;
         };
 
+        pairs = { };
+
         snippets = {
           snippets = {
             __unkeyed-1.__raw =
@@ -26,10 +28,11 @@
             __unkeyed-2.__raw = "require('mini.snippets').gen_loader.from_lang()";
           };
         };
+
+        surround = { };
       };
     };
 
     ts-context-commentstring.enable = true;
   };
 }
-

@@ -1,2 +1,4 @@
 { ... }:
-{}
+{
+  icons = import ./icons.nix;
+}

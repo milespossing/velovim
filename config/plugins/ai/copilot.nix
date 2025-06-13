@@ -12,4 +12,10 @@
       inherit (config.plugins.copilot-lua) enable;
     };
   };
+
+  keymaps = [
+    {
+      mode = "n";
+    }
+  ];
 }

@@ -1,3 +1,2 @@
 {
-  globals.mapleader = " ";
 }
