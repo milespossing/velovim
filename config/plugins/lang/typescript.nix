@@ -71,5 +71,7 @@
     };
 
     ts-autotag.enable = true;
+
+    neotest.adapters.vitest.enable = true;
   };
 }
