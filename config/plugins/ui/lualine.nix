@@ -1,7 +1,4 @@
-{ ... }:
-let
-  icons = import ../../../../lib/icons.nix;
-in
+{ icons, ... }:
 {
   plugins.lualine = {
     enable = true;

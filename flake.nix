@@ -9,15 +9,18 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs @ { self, nixvim, flake-utils, nixpkgs, ... }:
-    let
-      inherit (flake-utils.lib) eachDefaultSystem;
-    in
+  outputs =
     {
-      homeManagerModules.default = import ./modules/home-manager.nix;
-      nixosModules.default = import ./modules/nixos.nix;
-    } // eachDefaultSystem (system:
+      nixvim,
+      flake-utils,
+      nixpkgs,
+      self,
+      ...
+    }@inputs:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
+        nixvimLib = nixvim.lib.${system};
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
@@ -25,12 +28,22 @@
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
           inherit pkgs;
-          module = import ./config;
+          module = import ./config; # import the module directly
+          # You can use `extraSpecialArgs` to pass additional arguments to your module files
+          extraSpecialArgs = {
+            inherit inputs self;
+          } // import ./lib { inherit pkgs; };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in
       {
-        checks.default = nixvim.lib.${system}.check.mkTestDerivationFromNixvimModule nixvimModule;
+        checks = {
+          # Run `nix flake check` to verify that your config is not broken
+          default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+        };
+
+        # Lets you run `nix run` to start nixvim
         packages.default = nvim;
-      });
+      }
+    );
 }

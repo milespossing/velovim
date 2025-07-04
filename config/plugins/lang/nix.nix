@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ self, pkgs, lib, ... }:
 {
   plugins = {
     nix.enable = true;
@@ -18,16 +18,16 @@
       enable = true;
       settings =
         let
-          flake = builtins.getFlake (toString ../../..);
-          system = builtins.currentSystem;
+          flake = ''(builtins.getFlake "${self}")'';
+          system = ''''${builtins.currentSystem}'';
         in
         {
           formatting = {
             command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
           };
-          nixpkgs.expr = "import ${flake.inputs.nixpkgs} { }";
+          nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
           options = {
-            nixvim.expr = ''${flake.packages.${system}.nvim.options}'';
+            nixvim.expr = ''${flake}.packages.${system}.nvim.options'';
           };
         };
     };
