@@ -1,13 +1,13 @@
+{ nixvim }:
 {
   config,
   lib,
   ...
 }:
 let
-  inputs = config._module.args.inputs;
   cfg = config.programs.nixvim;
 in
 {
-  imports = [ inputs.nixvim.homeModules.nixvim ];
+  imports = [ nixvim.homeModules.default ];
   config = lib.mkIf cfg.enable { };
 }
