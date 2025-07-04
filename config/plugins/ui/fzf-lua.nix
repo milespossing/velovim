@@ -19,7 +19,13 @@
         action = "filetypes";
         options.desc = "File Type";
       };
+
       # Search
+      "<leader>sg" = {
+        action = "live_grep";
+        options.desc = "Live Grep";
+      };
+
       # Help
       "<leader>hk" = {
         action = "keymaps";
