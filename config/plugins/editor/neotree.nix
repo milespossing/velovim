@@ -1,4 +1,7 @@
-{ icons, ... }:
+{ ... }:
+let
+  icons = import ../../../../lib/icons.nix;
+in
 {
   plugins.neo-tree = {
     enable = true;
