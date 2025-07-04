@@ -4,8 +4,8 @@
     copilot-lua = {
       enable = true;
       settings = {
-        panel.enabled = !config.plugins.blink-cmp-copilot.enable;
-        suggestion.enabled = !config.plugins.blink-cmp-copilot.enabled;
+        panel.enabled = !config.plugins.blink-copilot.enable;
+        suggestion.enabled = !config.plugins.blink-copilot.enabled;
       };
     };
     copilot-chat = {
@@ -13,9 +13,13 @@
     };
   };
 
+  # Define a simple keymap to open Copilot Chat.
   keymaps = [
     {
       mode = "n";
+      key = "<leader>ac";
+      action = ":CopilotChat<CR>";
+      options.desc = "Open Copilot Chat";
     }
   ];
 }
