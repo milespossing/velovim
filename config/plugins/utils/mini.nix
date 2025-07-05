@@ -29,7 +29,11 @@
           };
         };
 
-        surround = { };
+        surround = {
+          mappings = {
+            add = "gsa";
+          };
+        };
       };
     };
 
