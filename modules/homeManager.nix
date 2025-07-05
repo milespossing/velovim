@@ -9,5 +9,5 @@ let
 in
 {
   imports = [ nixvim.homeModules.default ];
-  config.programs.nixvim = lib.mkIf cfg.enable import ../config;
+  config.programs.nixvim = lib.mkIf cfg.enable (import ../config);
 }
