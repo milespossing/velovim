@@ -1,6 +1,6 @@
 {
   imports = [
     ./whichkey.nix
-    ./neotree.nix
+    # ./neotree.nix
   ];
 }

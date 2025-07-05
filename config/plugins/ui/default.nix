@@ -6,7 +6,7 @@
     ./flash.nix
     ./fzf-lua.nix
     ./oil.nix
-    ./lualine.nix
+    # ./lualine.nix
     ./noice.nix
   ];
 
