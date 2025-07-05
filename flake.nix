@@ -46,6 +46,7 @@
         packages.default = nvim;
         homeModules.default = import ./modules/homeManager.nix {
           nixvim = nixvim;
+          inherit pkgs;
         };
       }
     );
