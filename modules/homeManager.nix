@@ -2,6 +2,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -16,6 +17,7 @@ in
     programs.nixvim = {
       enable = true;
       imports = [ ../config ];
+      extraSpecialArgs = import ../lib { inherit pkgs; };
     };
   };
 }
