@@ -1,8 +1,4 @@
-{
-  nixvim,
-  pkgs,
-  ...
-}:
+{ nixvim }:
 {
   config,
   lib,
@@ -10,22 +6,16 @@
 }:
 let
   cfg = config.velovim;
-  icons = import ../lib/icons;
 in
 {
+  imports = [ nixvim.homeModules.default ];
   options.velovim = {
     enable = lib.mkEnableOption "Enable velovim";
   };
   config = lib.mkIf cfg.enable {
-    imports = [
-      (nixvim.homeModules.default {
-        inherit pkgs;
-        module = import ../config;
-        extraSpecialArgs = {
-          inherit pkgs icons;
-        };
-      })
-    ];
-    programs.nixvim.enable = true;
+    programs.nixvim = {
+      enable = true;
+      imports = [ ../config ];
+    };
   };
 }

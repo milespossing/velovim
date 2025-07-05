@@ -7,7 +7,3 @@
   - I can put the flake out separate from the rest of my nix configuration, which is nice
   - I can run the nix flake directly without installing it--giving me the ability to test locally.
 
-* License
-
-  This project is distributed under the terms of the [[file:LICENSE][MIT License]].
-
