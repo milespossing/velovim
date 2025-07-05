@@ -12,8 +12,9 @@ in
   options.velovim = {
     enable = lib.mkEnableOption "Enable velovim";
   };
-  config.programs.nixvim = lib.mkIf cfg.enable {
-    enable = true;
-    imports = [ ./configWrapper.nix ];
+  config = lib.mkIf cfg.enable {
+    programs.nixvim = {
+      enable = true;
+    };
   };
 }
