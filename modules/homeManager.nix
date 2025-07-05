@@ -15,7 +15,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.nixvim = {
       enable = true;
-      imports = [ ./configWrapper.nix ];
+      imports = [ ../config ];
     };
   };
 }
