@@ -1,6 +1,5 @@
 {
   nixvim,
-  icons,
   pkgs,
   ...
 }:
@@ -11,6 +10,7 @@
 }:
 let
   cfg = config.velovim;
+  icons = import ../lib/icons;
 in
 {
   options.velovim = {
