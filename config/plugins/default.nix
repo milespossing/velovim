@@ -6,6 +6,7 @@
     ./git
     ./lang
     ./lsp
+    ./terminal
     ./testing
     ./theme
     ./treesitter
