@@ -20,7 +20,7 @@ in
         "v"
       ];
       key = "<leader>cf";
-      action = helpers.mkRaw "function() require('conform').format() end";
+      action = helpers.mkRaw "function() require('conform').format({ async = true }) end";
       options = {
         silent = true;
         desc = "Format";
