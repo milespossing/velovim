@@ -22,4 +22,8 @@
   extraPackages = with pkgs; [
     clj-kondo
   ];
+
+  extraPlugins = with pkgs; [
+    vimPlugins.cmp-conjure
+  ];
 }
