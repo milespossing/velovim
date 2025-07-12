@@ -18,4 +18,8 @@
       module = "blink.compat.source";
     };
   };
+
+  extraPackages = with pkgs; [
+    clj-kondo
+  ];
 }
