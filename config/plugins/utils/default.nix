@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./conjure.nix
     ./mini.nix
     ./kulala.nix
   ];

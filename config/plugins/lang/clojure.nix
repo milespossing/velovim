@@ -1,9 +1,6 @@
 { pkgs, lib, ... }:
 {
   plugins = {
-    conjure = {
-      enable = true;
-    };
     conform-nvim.settings = {
       formatters_by_ft = {
         clojure = [ "cljfmt" ];
@@ -13,18 +10,13 @@
         command = lib.getExe pkgs.cljfmt;
       };
     };
-    blink-cmp.settings.sources.providers.conjure = {
-      name = "conjure";
-      module = "blink.compat.source";
-    };
+  };
+
+  lsp.servers.clojure_lsp = {
+    enable = true;
   };
 
   extraPackages = with pkgs; [
-    clojure-lsp
     clj-kondo
-  ];
-
-  extraPlugins = with pkgs; [
-    vimPlugins.cmp-conjure
   ];
 }
