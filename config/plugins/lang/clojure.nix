@@ -20,6 +20,7 @@
   };
 
   extraPackages = with pkgs; [
+    clojure-lsp
     clj-kondo
   ];
 
