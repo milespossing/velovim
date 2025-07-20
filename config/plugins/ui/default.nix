@@ -8,6 +8,7 @@
     ./oil.nix
     ./lualine.nix
     ./noice.nix
+    ./terminal.nix
   ];
 
   plugins = {
