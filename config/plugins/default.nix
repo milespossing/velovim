@@ -9,7 +9,6 @@
     ./testing
     ./theme
     ./treesitter
-    ./snacks
     ./ui
     ./utils
   ];

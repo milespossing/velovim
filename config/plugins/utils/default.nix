@@ -4,6 +4,7 @@
     ./conjure.nix
     ./mini.nix
     ./kulala.nix
+    ./snacks.nix
   ];
 
   extraPlugins = with pkgs.vimPlugins; [
