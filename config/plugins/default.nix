@@ -12,4 +12,6 @@
     ./ui
     ./utils
   ];
+
+  plugins.lz-n.enable = true;
 }

@@ -33,16 +33,16 @@
       };
     };
 
-    treesitter-refactor = {
-      inherit (config.plugins.treesitter) enable;
-
-      highlightDefinitions = {
-        enable = true;
-        clearOnCursorMove = true;
-      };
-      smartRename.enable = true;
-      navigation.enable = true;
-    };
+    # treesitter-refactor = {
+    #   inherit (config.plugins.treesitter) enable;
+    #
+    #   highlightDefinitions = {
+    #     enable = true;
+    #     clearOnCursorMove = true;
+    #   };
+    #   smartRename.enable = true;
+    #   navigation.enable = true;
+    # };
   };
 
   keymaps = lib.mkIf config.plugins.treesitter-context.enable [

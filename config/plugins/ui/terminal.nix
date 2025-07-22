@@ -1,7 +1,16 @@
-{ lib, ... }:
+{ ... }:
 {
   plugins.toggleterm = {
     enable = true;
+    lazyLoad = {
+      enable = true;
+      settings = {
+        cmd = "ToggleTerm";
+        keys = [
+          "<C-t>"
+        ];
+      };
+    };
     settings = {
       open_mapping = "[[<C-t>]]";
       shell = "bash";

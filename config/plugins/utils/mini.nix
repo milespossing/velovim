@@ -32,6 +32,10 @@
         surround = {
           mappings = {
             add = "gsa";
+            delete = "gsd";
+            find = "gsf";
+            find_left = "gsF";
+            replace = "gsr";
           };
         };
       };

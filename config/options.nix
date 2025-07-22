@@ -7,6 +7,8 @@
       expandtab = true;
 
       smartindent = true;
+
+      foldlevel = 50;
     };
   };
 }

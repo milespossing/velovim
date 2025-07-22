@@ -1,6 +1,6 @@
 {
   imports = [
     ./blink.nix
-    ./cmp.nix
+    # ./cmp.nix
   ];
 }

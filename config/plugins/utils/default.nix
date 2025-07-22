@@ -1,10 +1,15 @@
 { pkgs, ... }:
 {
   imports = [
+    # general
     ./conjure.nix
-    ./mini.nix
     ./kulala.nix
+    # suites
+    ./mini.nix
     ./snacks.nix
+    # Find/replace
+    ./grug-far.nix
+    ./spectre.nix
   ];
 
   extraPlugins = with pkgs.vimPlugins; [
