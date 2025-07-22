@@ -3,7 +3,6 @@
   imports = [
     ./alpha.nix
     ./bufferline.nix
-    ./flash.nix
     ./fzf-lua.nix
     ./oil.nix
     ./lualine.nix
