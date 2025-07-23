@@ -37,4 +37,27 @@
       };
     };
   };
+
+  lsp.keymaps = [
+    {
+      key = "grr";
+      action = "<cmd>FzfLua lsp_references<cr>";
+      options.desc = "Lsp References";
+    }
+    {
+      key = "grd";
+      action = "<cmd>FzfLua lsp_definitions<cr>";
+      options.desc = "Lsp Definitions";
+    }
+    {
+      key = "grL";
+      action = "<cmd>FzfLua lsp_finder<cr>";
+      options.desc = "Lsp Finder";
+    }
+    {
+      key = "cA";
+      action = "<cmd>FzfLua lsp_code_actions<cr>";
+      options.desc = "Lsp Code Actions";
+    }
+  ];
 }

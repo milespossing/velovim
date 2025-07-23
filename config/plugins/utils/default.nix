@@ -4,6 +4,7 @@
     # general
     ./conjure.nix
     ./kulala.nix
+    ./oil.nix
     # suites
     ./mini.nix
     ./snacks.nix

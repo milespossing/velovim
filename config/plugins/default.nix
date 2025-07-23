@@ -3,8 +3,10 @@
     ./completion
     ./dap
     ./editor
+    ./formatting
     ./git
     ./lang
+    ./linting
     ./lsp
     ./testing
     ./theme

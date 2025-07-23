@@ -19,6 +19,13 @@
 
         incremental_selection.enable = true;
         indent.enable = true;
+        ensure_installed = [
+          "diff"
+          "just"
+          "yaml"
+          "toml"
+          "xml"
+        ];
       };
       nixvimInjections = true;
     };

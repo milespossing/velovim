@@ -1,3 +1,7 @@
+{ lib, ... }:
+let
+  helpers = lib.nixvim;
+in
 {
   plugins.alpha = {
     enable = true;
@@ -45,12 +49,12 @@
         {
           type = "button";
           val = "  Find File";
-          on_press.__raw = "function() require('fzf-lua').files() end";
+          on_press.__raw = "function() Snacks.picker.files() end";
           opts = {
             keymap = [
               "n"
               "f"
-              "<cmd>FzfLua files<CR>"
+              (helpers.mkRaw "function() Snacks.picker.files() end")
               {
                 noremap = true;
                 silent = true;
@@ -94,12 +98,12 @@
         {
           type = "button";
           val = "󰈚  Recent Files";
-          on_press.__raw = "require('fzf-lua').oldfiles";
+          on_press.__raw = "function() Snacks.picker.recent() end";
           opts = {
             keymap = [
               "n"
               "r"
-              "<cmd>FzfLua oldfiles<CR>"
+              (helpers.mkRaw "function() Snacks.picker.recent() end")
               {
                 noremap = true;
                 silent = true;
@@ -119,12 +123,12 @@
         {
           type = "button";
           val = "󰈭  Find Word";
-          on_press.__raw = "require('fzf-lua').live_grep";
+          on_press.__raw = "function() Snacks.picker.grep() end";
           opts = {
             keymap = [
               "n"
               "g"
-              "<cmd>FzfLua live_grep<CR>"
+              (helpers.mkRaw "function() Snacks.picker.grep() end")
               {
                 noremap = true;
                 silent = true;
