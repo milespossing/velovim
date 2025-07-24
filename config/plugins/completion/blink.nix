@@ -25,6 +25,14 @@
     {
       blink-cmp = {
         enable = true;
+        lazyLoad.settings = {
+          enable = true;
+          event = [
+            "BufReadPost"
+            "BufWritePost"
+            "BufNewFile"
+          ];
+        };
 
         settings = {
           completion = {
