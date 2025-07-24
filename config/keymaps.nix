@@ -4,13 +4,6 @@
   keymaps = [
     # Windows
     {
-      mode = "n";
-      key = "<leader>wk";
-      action = "<C-w>k";
-      options.desc = "Move To Window Up";
-    }
-
-    {
       mode = [
         "t"
         "n"
@@ -19,7 +12,6 @@
       action = "<cmd>wincmd h<cr>";
       options.desc = "Move To Window Left";
     }
-
     {
       mode = [
         "t"
@@ -29,7 +21,6 @@
       action = "<cmd>wincmd j<cr>";
       options.desc = "Move To Window Down";
     }
-
     {
       mode = [
         "t"
@@ -39,7 +30,6 @@
       action = "<cmd>wincmd k<cr>";
       options.desc = "Move To Window Up";
     }
-
     {
       mode = [
         "t"
@@ -49,28 +39,30 @@
       action = "<cmd>wincmd l<cr>";
       options.desc = "Move To Window Right";
     }
-
+    {
+      mode = "n";
+      key = "<leader>wk";
+      action = "<C-w>k";
+      options.desc = "Move To Window Up";
+    }
     {
       mode = "n";
       key = "<leader>wj";
       action = "<C-w>j";
       options.desc = "Move To Window Down";
     }
-
     {
       mode = "n";
       key = "<leader>wh";
       action = "<C-w>h";
       options.desc = "Move To Window Left";
     }
-
     {
       mode = "n";
       key = "<leader>wl";
       action = "<C-w>l";
       options.desc = "Move To Window Right";
     }
-
     {
       mode = "n";
       key = "<leader>wd";
@@ -80,7 +72,6 @@
         desc = "Delete window";
       };
     }
-
     {
       mode = "n";
       key = "<leader>ws";
@@ -90,7 +81,6 @@
         desc = "Split window below";
       };
     }
-
     {
       mode = "n";
       key = "<leader>wv";
@@ -102,7 +92,6 @@
     }
 
     # Buffers
-
     {
       mode = "n";
       key = "<S-h>";
@@ -111,13 +100,11 @@
         silent = true;
       };
     }
-
     {
       mode = "n";
       key = "<S-l>";
       action = "<cmd>BufferLineCycleNext<cr>";
       options.silent = true;
     }
-
   ];
 }
