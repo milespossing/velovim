@@ -9,7 +9,7 @@
       };
       "<leader>," = {
         action = "buffers";
-        options.desc = "Buffers";
+        options.desc = "Find Buffer";
       };
       "<leader>fr" = {
         action = "oldfiles";
