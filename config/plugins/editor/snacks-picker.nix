@@ -5,7 +5,10 @@ in
 {
   plugins.snacks = {
     enable = true;
-    settings.picker.enabled = true;
+    settings.picker = {
+      enabled = true;
+      ui_select = true;
+    };
   };
   keymaps = [
     {

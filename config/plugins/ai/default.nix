@@ -1,3 +1,6 @@
 {
-  imports = [ ./copilot.nix ];
+  imports = [
+    ./copilot.nix
+    ./copilot-chat.nix
+  ];
 }
