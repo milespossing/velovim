@@ -7,8 +7,8 @@
 {
   plugins.snacks.settings.dashboard = {
     enabled = true;
-    header = headers.velo;
     preset = {
+      header = headers.velo;
       keys = [
         {
           icon = " ";
@@ -49,17 +49,22 @@
       ];
     };
     sections = [
-      { section = "header"; }
+      {
+        section = "header";
+        pane = 2;
+      }
       {
         section = "keys";
         gap = 1;
         padding = 1;
+        pane = 2;
       }
       {
         section = "terminal";
-        cmd = "${lib.getExe pkgs.krabby} random --no-title; sleep .1";
-        pane = 2;
+        cmd = "${lib.getExe pkgs.krabby} random -i; sleep .1";
         height = 30;
+        indent = 4;
+        random = 20;
       }
     ];
   };
