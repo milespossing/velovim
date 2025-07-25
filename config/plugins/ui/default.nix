@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
   imports = [
-    ./alpha.nix
     ./bufferline.nix
     ./lualine.nix
     ./noice.nix
+    ./snacks-dashboard.nix
     ./terminal.nix
   ];
 
