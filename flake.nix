@@ -32,7 +32,8 @@
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             inherit inputs self;
-          } // import ./lib { inherit pkgs; };
+          }
+          // import ./lib { inherit pkgs; };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in
