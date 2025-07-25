@@ -45,9 +45,7 @@
 
         # Lets you run `nix run` to start nixvim
         packages.default = nvim;
-        homeModules.default = import ./modules/homeManager.nix {
-          nixvim = nixvim;
-        };
+        homeModules.default = import ./modules/homeManager.nix { nvim = nvim; };
       }
     );
 }
