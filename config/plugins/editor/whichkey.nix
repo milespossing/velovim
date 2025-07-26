@@ -48,6 +48,11 @@
           __unkeyed-1 = "<leader>e";
           icon = " ";
         }
+        {
+          __unkeyed-1 = "<leader>t";
+          group = "Testing";
+          icon = "󰙨 ";
+        }
       ];
     };
   };
