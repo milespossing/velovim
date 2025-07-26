@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, lib, ... }:
 {
   plugins.toggleterm = {
     enable = true;
@@ -13,7 +13,7 @@
     };
     settings = {
       open_mapping = "[[<C-t>]]";
-      shell = "bash";
+      shell = lib.getExe pkgs.bash;
       hide_numbers = true;
       share_terminals = true;
       start_in_insert = true;
